@@ -13,17 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/','App\Http\Controllers\PrincipalController@home');
+Route::get('sobre-nos','App\Http\Controllers\SobreNosController@sobreNos');
+Route::get('contato','App\Http\Controllers\ContatoController@contato');
+
+Route::get('raiz', function () {
     return 'raiz';
 });
 
-Route::get('/sobre-nos', function () {
-    return 'Sobre nós '.md5(rand(0,time()));
-});
-
-Route::get('/contato', function () {
-    return 'Contato '.md5(rand(0,time()));
-});
 
 
 
