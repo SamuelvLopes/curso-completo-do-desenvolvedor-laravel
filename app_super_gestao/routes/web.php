@@ -14,5 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'raiz';
 });
+
+Route::get('/sobre-nos', function () {
+    return 'Sobre nós '.md5(rand(0,time()));
+});
+
+Route::get('/contato', function () {
+    return 'Contato '.md5(rand(0,time()));
+});
+
+
+
