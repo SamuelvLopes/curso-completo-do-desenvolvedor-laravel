@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class ContatoController extends Controller
 {
-    public function contato():void{
+    public function contato():mixed{
 
-        echo __METHOD__;
+        return view('site.contato');
     }
 }

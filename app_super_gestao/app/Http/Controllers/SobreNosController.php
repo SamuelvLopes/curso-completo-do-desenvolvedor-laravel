@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class SobreNosController extends Controller
 {
-    public function sobreNos():void{
+    public function sobreNos():mixed{
 
-        echo __METHOD__;
+        return view('site.sobre');
     }
 }

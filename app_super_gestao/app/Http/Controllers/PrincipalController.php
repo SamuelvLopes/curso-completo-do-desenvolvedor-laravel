@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class PrincipalController extends Controller
 {
-    public function principal():void{
+    public function principal():mixed{
 
-        echo __METHOD__;
+      return view('site.principal');
     }
 }
