@@ -10,4 +10,9 @@ class PrincipalController extends Controller
 
       return view('site.principal');
     }
+
+    public function principalParam(string $nome,string $capitulo):mixed{
+var_dump('os parametros chegaram aqui',$nome,$capitulo);
+        return view('site.principal');
+      }
 }
