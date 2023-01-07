@@ -36,5 +36,13 @@ Route::get('raiz', function () {
 });
 
 
+Route::prefix('/app')->group(function(){
 
+    Route::get('/clientes',function(){ return time();});
+    Route::get('/produtos',function(){ return time(); });
+    Route::get('/fornecedores',function(){ return time(); });
+
+
+
+});
 

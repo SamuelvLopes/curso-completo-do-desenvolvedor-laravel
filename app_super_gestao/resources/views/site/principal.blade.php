@@ -38,6 +38,17 @@
     </li>
     <li>
         <a href="/produtos">produtos</a>
+    </li> 
+    
+    
+    <li>
+        <a href="/app/clientes"> app/clientes</a>
+    </li>
+    <li>
+        <a href="/app/fornecedores"> app/fornecedores</a>
+    </li>
+    <li>
+        <a href="/app/produtos"> app/produtos</a>
     </li>
 </ul>    
         
