@@ -27,5 +27,17 @@
     <li>
         <a href="raiz">RAIZ</a>
     </li>
+    <li>
+        <a href="/login">login</a>
+    </li>
+    <li>
+        <a href="/clientes">clientes</a>
+    </li>
+    <li>
+        <a href="/fornecedores">fornecedores</a>
+    </li>
+    <li>
+        <a href="/produtos">produtos</a>
+    </li>
 </ul>    
         
