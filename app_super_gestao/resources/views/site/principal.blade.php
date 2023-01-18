@@ -3,17 +3,17 @@
 
 <ul>
     <li>
-        <a href="/">Principal</a>
+        <a href="{{route('site.index')}}">Principal</a>
     </li>
     <li>
-    <a href="regexnoparam/hijbnk/5">regex</a>
+    <a href="{{route('app.produtos')}}">regex</a>
     </li>
     <li>
        
-    <a href="sobre-nos">sobre nos</a>
+    <a href="{{route('app.produtos')}}">sobre nos</a>
     </li>
     <li>
-        <a href="contato">contato</a>
+        <a href="{{route('app.produtos')}}">contato</a>
     </li>
     <li>
         <a href="pao2/fgfh">ultimo eh opcional</a>
