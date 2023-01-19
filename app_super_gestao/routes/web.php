@@ -55,3 +55,5 @@ Route::fallback(function(){
     echo 'errou vá em '.route('app.produtos');
 });
 
+
+Route::get('/teste/{valor1}/{valor2}','App\Http\Controllers\TesteController@teste')->name('teste'); 
