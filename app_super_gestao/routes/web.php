@@ -51,3 +51,7 @@ Route::prefix('/app')->group(function(){
 
 });
 
+Route::fallback(function(){
+    echo 'errou vá em '.route('app.produtos');
+});
+
