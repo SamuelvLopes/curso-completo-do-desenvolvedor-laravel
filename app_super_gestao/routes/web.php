@@ -16,7 +16,12 @@ Route::get('/login',function(){ return 'login '.time();})->name('site.index');
 Route::get('/clientes',function(){ return 'clientes '.time();})->name('site.cliente');
 Route::get('/fornecedores',function(){ return 'fornecedores '.time();})->name('site.fornecedores');
 Route::get('/produtos',function(){ return 'produtos '.time();})->name('site.produtos');
-
+Route::get('/rota1',function(){
+    echo 'rota1';
+})->name('rota1');
+Route::get('/rota2',function(){
+    return redirect()->route('rota1');
+})->name('rota2');
 
 
 Route::get('/','App\Http\Controllers\PrincipalController@principal')->name('principal');
