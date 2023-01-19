@@ -27,6 +27,7 @@ Route::get('/rota2',function(){
 Route::get('/','App\Http\Controllers\PrincipalController@principal')->name('principal');
 Route::get('/regexnoparam/{nome}/{teste}','App\Http\Controllers\PrincipalController@regex')->where('teste','[0-9]+')->where('nome','[A-Za-z]+')->name('site.regex');
 Route::get('/sobre-nos','App\Http\Controllers\SobreNosController@sobreNos')->name('site.sobrenos');
+Route::post('/contato','App\Http\Controllers\ContatoController@contato')->name('site.contato');
 Route::get('/contato','App\Http\Controllers\ContatoController@contato')->name('site.contato');
 Route::get('/pao2/{livro}/{capitulo?}','App\Http\Controllers\PrincipalController@principalParam')->name('site.paran');
 Route::get('/pao/{livro}/{capitulo}','App\Http\Controllers\PrincipalController@principalParam');
