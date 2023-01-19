@@ -4,8 +4,6 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-
-
 return new class extends Migration
 {
     /**
@@ -15,10 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('contatos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->enum('difficulty', ['corsim', 'cornão']);
+        Schema::table('contatos', function (Blueprint $table) {
+            
+            $table->enum('sexo', ['macho', 'femea']);
         });
     }
 
@@ -29,6 +26,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contatos');
+        Schema::table('contatos', function (Blueprint $table) {
+            
+            $table->dropColumn(['sexo']);
+        });
     }
 };
