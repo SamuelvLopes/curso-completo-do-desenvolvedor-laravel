@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Middleware\LogAcessoMiddleware;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,7 +24,8 @@ Route::get('/rota2',function(){
 })->name('rota2');
 
 
-Route::get('/','App\Http\Controllers\PrincipalController@principal')->name('principal');
+Route::get('/','App\Http\Controllers\PrincipalController@principal')->name('principal')->middleware(LogAcessoMiddleware::class);
+Route::middleware(LogAcessoMiddleware::class)->get('/dois','App\Http\Controllers\PrincipalController@principal')->name('dois');
 Route::get('/regexnoparam/{nome}/{teste}','App\Http\Controllers\PrincipalController@regex')->where('teste','[0-9]+')->where('nome','[A-Za-z]+')->name('site.regex');
 Route::get('/sobre-nos','App\Http\Controllers\SobreNosController@sobreNos')->name('site.sobrenos');
 Route::post('/contato','App\Http\Controllers\ContatoController@contato')->name('site.contato');
