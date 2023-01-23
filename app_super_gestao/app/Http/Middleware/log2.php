@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Midwadlere;
+namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
 use App\Models\LogAcesso;
 
-class LogAcessoMiddleware
+class log2
 {
     /**
      * Handle an incoming request.
@@ -19,8 +19,8 @@ class LogAcessoMiddleware
     {
         $ip= $request->server->get('REMOTE_ADDR');
         $rota= $request->getRequestUri();
+        var_dump([$ip,$rota]);
         LogAcesso::create(['log'=>$ip.'-'.$rota]);
-        return Response('morreu');
-        //return $next($request);
+        return $next($request);
     }
 }
