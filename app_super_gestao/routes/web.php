@@ -42,7 +42,7 @@ Route::get('raiz', function () {
 });
 
 
-Route::prefix('/app')->middleware('log.acesso','autenticacao')->group(function(){
+Route::prefix('/app')->middleware('log.acesso','autenticacao:padrao,make L')->group(function(){
 
     Route::get('/clientes',function(){ return time();})->name('app.clientes');
     Route::get('/produtos',function(){ return time(); })->name('app.produtos');

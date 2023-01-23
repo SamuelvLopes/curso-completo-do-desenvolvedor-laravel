@@ -14,9 +14,14 @@ class autenticacao
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next)
+    public function handle(Request $request, Closure $next, $autenticacao , $acao)
     {
-        return Response('Rota exige auth');
-        //return $next($request);
+        if(true){
+            var_dump($autenticacao,$acao);
+            echo '<hr>';
+            return $next($request);
+        }
+            return Response('Rota exige auth');
+        
     }
 }
