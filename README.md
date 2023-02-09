@@ -79,9 +79,13 @@
 ### Listener
 - php artisan make:listener MessageTriggerListener --event=MessageEvent
 
+### Filas
+- php artisan queue:work --daemon --tries=5
 
 ### Passar pra view em 
 - array associativo
 - compact
 - with
+
+
 
