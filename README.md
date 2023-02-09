@@ -78,7 +78,8 @@
 
 ### Listener
 - php artisan make:listener MessageTriggerListener --event=MessageEvent
-
+### Seeder
+- php artisan db:seed
 ### Filas
 - php artisan queue:work --daemon --tries=5
 
